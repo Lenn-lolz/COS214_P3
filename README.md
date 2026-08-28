@@ -2,9 +2,9 @@
 
 ## Members' Details:
 
-Rei Piater-Boswell (u25678592)
-Leanne van der Horst (u24566935)
-Declan McCullough (uYOUR_NUMBER_HERE)
+Declan McCullough (uYOUR_NUMBER_HERE)  
+Rei Piater-Boswell (u25678592)  
+Leanne van der Horst (u24566935)  
 
 ## (THIS IS PLACEHOLDER AAAAAAAH) Really Really Fun Game Fest (THIS IS PLACEHOLDER AAAAAAAH)
 
