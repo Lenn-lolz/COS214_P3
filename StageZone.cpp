@@ -30,12 +30,12 @@ int StageZone::getCapacity() {
 	throw "Not yet implemented";
 }
 
-void StageZone::add(EventComponent event) {
+void StageZone::add(EventComponent* event) {
 	// TODO - implement StageZone::add
 	throw "Not yet implemented";
 }
 
-void StageZone::remove(EventComponent event) {
+void StageZone::remove(EventComponent* event) {
 	// TODO - implement StageZone::remove
 	throw "Not yet implemented";
 }

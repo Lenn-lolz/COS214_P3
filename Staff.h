@@ -1,19 +1,18 @@
 #ifndef STAFF_H
 #define STAFF_H
 
-class Staff : public EventUnit {
+#include "EventUnit.h"
+#include "EventComponent.h"
 
+#include <vector>
+#include <iostream>
+
+class Staff : public EventUnit {
 
 public:
 	Staff();
-
-	void ~Staff();
-
+	virtual ~Staff() = 0;		
 	virtual void update() = 0;
-
-	virtual void ~Staff() = 0;
-
-	void ~Staff();
 };
 
 #endif

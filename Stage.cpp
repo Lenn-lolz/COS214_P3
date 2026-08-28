@@ -1,4 +1,4 @@
-
+#include "Stage.h"
 
 int Stage::getCapacity() {
 	return this->capacity;

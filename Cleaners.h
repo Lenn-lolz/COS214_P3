@@ -1,25 +1,23 @@
 #ifndef CLEANERS_H
 #define CLEANERS_H
 
+
+#include "Staff.h"
+
+#include <vector>
+#include <iostream>
+
+using namespace std;
+
 class Cleaners : public Staff {
-
-
+private:
+	bool active;
 public:
 	Cleaners();
-
-	void ~Cleaners();
-
+	~Cleaners();
 	void update();
-
-	void ~Cleaners();
-
 	bool getActive();
-
 	void setActive(bool active);
-
-	void ~Cleaners();
-private:
-	boolean active;
 };
 
 #endif

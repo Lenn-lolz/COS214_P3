@@ -30,12 +30,12 @@ int FoodCourt::getCapacity() {
 	throw "Not yet implemented";
 }
 
-void FoodCourt::add(EventComponent event) {
+void FoodCourt::add(EventComponent* event) {
 	// TODO - implement FoodCourt::add
 	throw "Not yet implemented";
 }
 
-void FoodCourt::remove(EventComponent event) {
+void FoodCourt::remove(EventComponent* event) {
 	// TODO - implement FoodCourt::remove
 	throw "Not yet implemented";
 }

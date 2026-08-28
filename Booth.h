@@ -1,34 +1,29 @@
 #ifndef BOOTH_H
 #define BOOTH_H
 
+
+#include "EventUnit.h"
+
+#include <vector>
+#include <iostream>
+
+using namespace std;
+
 class Booth : public EventUnit {
 
-
-public:
-	Booth();
-
-	void ~Booth();
 private:
 	int boothNumber;
+	string name;
 public:
-
+	Booth();
+	~Booth();
 	void update();
-
 	Booth* clone();
-
-	void ~Booth();
-
 	string getName();
-
 	void setName(string name);
-
 	int getBoothNumber();
-
 	void setBoothNumber(int boothNumber);
 
-	void ~Booth();
-private:
-	string name;
 };
 
 #endif

@@ -30,12 +30,12 @@ int Arts::getCapacity() {
 	throw "Not yet implemented";
 }
 
-void Arts::add(EventComponent event) {
+void Arts::add(EventComponent* event) {
 	// TODO - implement Arts::add
 	throw "Not yet implemented";
 }
 
-void Arts::remove(EventComponent event) {
+void Arts::remove(EventComponent* event) {
 	// TODO - implement Arts::remove
 	throw "Not yet implemented";
 }

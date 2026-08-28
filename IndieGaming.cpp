@@ -30,12 +30,12 @@ int IndieGaming::getCapacity() {
 	throw "Not yet implemented";
 }
 
-void IndieGaming::add(EventComponent event) {
+void IndieGaming::add(EventComponent* event) {
 	// TODO - implement IndieGaming::add
 	throw "Not yet implemented";
 }
 
-void IndieGaming::remove(EventComponent event) {
+void IndieGaming::remove(EventComponent* event) {
 	// TODO - implement IndieGaming::remove
 	throw "Not yet implemented";
 }
