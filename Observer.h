@@ -2,11 +2,9 @@
 #define OBSERVER_H
 
 class Observer {
-
-
 public:
 	Observer();
-	virtual ~Observer() = 0;
+	virtual ~Observer();
 	virtual void update() = 0;
 	virtual void evacuate() = 0;
 	virtual void open() = 0;

@@ -1,21 +1,17 @@
 #include "Cleaners.h"
+#include <iostream>
+using namespace std;
 
-Cleaners::Cleaners() {
-	// TODO - implement Cleaners::Cleaners
-	throw "Not yet implemented";
-}
+Cleaners::Cleaners():active(true){}//sets active to default true
 
 void Cleaners::update() {
-	// TODO - implement Cleaners::update
-	throw "Not yet implemented";
+	cout<<"Cleaners are cleaning zone"<<endl;//idk if you guys wanna make different
 }
 
-bool Cleaners::getActive() {
-	// TODO - implement Cleaners::getActive
-	throw "Not yet implemented";
+bool Cleaners::getActive(){//returns current active value
+	return active;
 }
 
-void Cleaners::setActive(bool active) {
-	// TODO - implement Cleaners::setActive
-	throw "Not yet implemented";
+void Cleaners::setActive(bool active){//sets active to what is passed
+	this->active = active;
 }

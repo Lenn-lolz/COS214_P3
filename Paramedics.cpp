@@ -1,11 +1,11 @@
 #include "Paramedics.h"
+#include <iostream>
+using namespace std;
 
-Paramedics::Paramedics() {
-	// TODO - implement Paramedics::Paramedics
-	throw "Not yet implemented";
-}
+Paramedics::Paramedics(){}
+
+Paramedics::~Paramedics(){}
 
 void Paramedics::update() {
-	// TODO - implement Paramedics::update
-	throw "Not yet implemented";
+	cout<<"Paramedics are helping patient"<<endl;//idk if you guys wanna do something different
 }

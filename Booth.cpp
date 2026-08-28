@@ -1,32 +1,34 @@
 #include "Booth.h"
+#include <string>
+#include <iostream>
+#include <sstream>
+using namespace std;
 
-Booth::Booth() {
-	// TODO - implement Booth::Booth
-	throw "Not yet implemented";
-}
+Booth::Booth(){}
 
-void Booth::update() {
+Booth::~Booth(){}
+
+void Booth::update(){
 	// TODO - implement Booth::update
 	throw "Not yet implemented";
 }
 
-Booth* Booth::clone() {
-	// TODO - implement Booth::clone
-	throw "Not yet implemented";
+Booth* Booth::clone(){
+	//return new Booth(); //Gonna fix this later -Rei
 }
 
-string Booth::getName() {
-	return this->name;
+string Booth::getName(){
+	return name;
 }
 
-void Booth::setName(string name) {
+void Booth::setName(string name){
 	this->name = name;
 }
 
-int Booth::getBoothNumber() {
-	return this->boothNumber;
+int Booth::getBoothNumber(){
+	return boothNumber;
 }
 
-void Booth::setBoothNumber(int boothNumber) {
+void Booth::setBoothNumber(int boothNumber){
 	this->boothNumber = boothNumber;
 }
