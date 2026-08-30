@@ -6,10 +6,10 @@ ESports::ESports(EventControl* subject, int capacity, string name, int maxCapaci
     this->name = name;
     this->maxCapacity = maxCapacity;
     this->open = false;
-    subject->attach(this);
+    //subject->attach(this);
 }
 ESports::~ESports(){
-
+	subject->detach(this);
 }
 int ESports::getCapacity() {
 	return this->capacity;
@@ -49,6 +49,9 @@ void ESports::update(Notice notification)
 			break;
 		case CLOSE:
 			open = false;
+			cout << "- Presentation ending at " << getName() << "\n";
+			cout << "- Closing " << getName() << "\n";
+
 			break;
 		case EVACUATE:
 			break;

@@ -12,6 +12,7 @@ private:
 	EventControl *subject;
 	string product;
 	bool open;
+	bool cooking;
 	double productPrice;
 
 public:
@@ -28,6 +29,10 @@ public:
 	void cookingFood();
 	double getProductPrice();
 	void setProductPrice(double productPrice);
+
+	void update(Notice notification);
+	void onUpdateBoolean(string notice, bool notification);
+	void onUpdateString(string notice, string notification);
 };
 
 #endif

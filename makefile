@@ -35,3 +35,5 @@ clean:
 rebuild: clean $(TARGET)
 
 all: $(TARGET)
+
+#valgrind --leak-check=full ./EventSystem

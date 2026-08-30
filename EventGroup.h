@@ -11,9 +11,10 @@
 using namespace std;
 
 class EventGroup : public EventComponent {
-
-public:
+protected:
 	vector<EventComponent*> children;
+public:
+	
 	virtual ~EventGroup() = 0;
 	void update(Notice notification);
 	void addChild(EventComponent* eComponent);

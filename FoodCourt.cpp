@@ -3,6 +3,13 @@
 FoodCourt::FoodCourt(EventControl* subject, bool open, bool clean) {
 
 }
+
+void FoodCourt::update(Notice notif){
+	
+    for (vector<EventComponent*>::iterator i = children.begin();i != children.end();++i){
+        (*i)->update(notif);
+    }
+}
 FoodCourt::~FoodCourt(){
 
 }
@@ -15,5 +22,7 @@ void FoodCourt::setRestaurantDisplay(string restaurantDisplay) {
 }
 
 void FoodCourt::Sale() {
-
+	for (vector<EventComponent*>::iterator i = children.begin();i != children.end();++i){
+		
+	}
 }
