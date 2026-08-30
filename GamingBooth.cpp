@@ -12,10 +12,24 @@ GamingBooth::GamingBooth(GamingBooth &booth) : subject(booth.subject), name(boot
 {
 }
 
-void GamingBooth::update(bool notification)
+void GamingBooth::update(Notice notification)
 {
-	// TODO - implement GamingBooth::update
-	throw "Not yet implemented";
+	switch (notification)
+	{ // implementation based on notification?
+	case OPEN:
+		open = true;
+		break;
+	case CLOSE:
+		open = false;
+		break;
+	case EVACUATE:
+		break;
+	case STAGE_EVENT:
+		break;
+	case MAX_CAPACITY:
+		open = false;
+		break;
+	}
 }
 
 GamingBooth *GamingBooth::clone()

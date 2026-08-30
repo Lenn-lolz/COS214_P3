@@ -45,3 +45,23 @@ void DemoZone::startPresentation()
 	// temp cout statement
 	cout << "- Presentation starting at" << getName() << "\n";
 }
+
+void DemoZone::update(Notice notification)
+{
+	switch (notification)
+	{ // implementation based on notification?
+	case OPEN:
+		open = true;
+		break;
+	case CLOSE:
+		open = false;
+		break;
+	case EVACUATE:
+		break;
+	case STAGE_EVENT:
+		break;
+	case MAX_CAPACITY:
+		open = false;
+		break;
+	}
+}

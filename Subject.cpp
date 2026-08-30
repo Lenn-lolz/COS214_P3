@@ -1,11 +1,18 @@
 #include "Subject.h"
-
-void Subject::attach(Observer* observer) {
-	// TODO - implement Subject::attach
-	throw "Not yet implemented";
+Subject::~Subject()
+{
+}
+void Subject::attach(Observer *observer)
+{
+	// add observer to vector. also checks for multiple
+	if (std::find(observerList.begin(), observerList.end(), observer) == observerList.end())
+	{
+		observerList.push_back(observer);
+	}
 }
 
-void Subject::detach(Observer* observer) {
-	// TODO - implement Subject::detach
-	throw "Not yet implemented";
+void Subject::detach(Observer *observer)
+{
+	// remove specified observer from vector
+	observerList.erase(std::remove(observerList.begin(), observerList.end(), observer), observerList.end());
 }

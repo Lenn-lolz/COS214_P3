@@ -46,22 +46,22 @@ void MeetAndGreet::startPresentation()
 	std::cout << "Meet and Greet Stage " + this->name + " is starting the presentation of " + this->presentation;
 }
 
-void MeetAndGreet::onUpdateBoolean(string notice, bool notification)
+void MeetAndGreet::update(Notice notification)
 {
-	if (notice == "evacuate")
-	{
-		this->open = !notification;
-	}
-	if (notice == "openMeetAndGreet")
-	{
-		this->open = notification;
-	}
-}
-void MeetAndGreet::onUpdateString(string notice, string notification)
-{
-	if (notice == "startPresentation")
-	{
-		this->presentation = notification;
-		this->startPresentation();
+	switch (notification)
+	{ // implementation based on notification?
+	case OPEN:
+		open = true;
+		break;
+	case CLOSE:
+		open = false;
+		break;
+	case EVACUATE:
+		break;
+	case STAGE_EVENT:
+		break;
+	case MAX_CAPACITY:
+		open = false;
+		break;
 	}
 }

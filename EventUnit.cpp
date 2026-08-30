@@ -1,10 +1,8 @@
 #include "EventUnit.h"
 
-void EventUnit::updateBoolean(string notice, bool notification)
+EventUnit::~EventUnit()
 {
-	onUpdateBoolean(notice, notification);
 }
-void EventUnit::updateString(string notice, string notification)
+void EventUnit::update(Notice notification)
 {
-	onUpdateString(notice, notification);
 }

@@ -22,20 +22,19 @@ void Cleaners::cleaningUp(string name)
 	std::cout << "The cleaners are working and are now cleaning up " + name;
 }
 
-void Cleaners::onUpdateBoolean(string notice, bool notification)
+void Cleaners::update(Notice notification)
 {
-	if (notice == "cleanersActive")
-	{
-		this->setActive(notification);
+	switch (notification)
+	{ // implementation based on notification?
+	case OPEN:
+		break;
+	case CLOSE:
+		break;
+	case EVACUATE:
+		break;
+	case STAGE_EVENT:
+		break;
+	case MAX_CAPACITY:
+		break;
 	}
-	if (notice == "evacuate")
-	{
-		this->setActive(!notification);
-	}
-}
-
-void Cleaners::onUpdateString(string notice, string notification)
-{
-	// TO-DO
-	return;
 }

@@ -18,25 +18,22 @@ void Paramedics::addressingWound()
 		std::cout << "Paramedics are not on Duty and cannot at this time address wounds.\n";
 	}
 }
-void Paramedics::onUpdateBoolean(string notice, bool notification)
+
+void Paramedics::update(Notice notification)
 {
-	if (notice == "evacuate")
-	{
-		this->onDuty = !notification;
+	switch (notification)
+	{ // implementation based on notification?
+	case OPEN:
+		break;
+	case CLOSE:
+		break;
+	case EVACUATE:
+		this->onDuty = true;
 		this->addressingWound();
+		break;
+	case STAGE_EVENT:
+		break;
+	case MAX_CAPACITY:
+		break;
 	}
-	if (notice == "foodCourtOnFire")
-	{
-		this->onDuty = !notification;
-		this->addressingWound();
-	}
-	if (notice == "onDutyParamedics")
-	{
-		this->onDuty = notification;
-	}
-}
-void Paramedics::onUpdateString(string notice, string notification)
-{
-	// TO-DO
-	return;
 }

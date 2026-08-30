@@ -1,9 +1,16 @@
 #ifndef EVENTCONTROL_H
 #define EVENTCONTROL_H
 
-using namespace std;
-
 #include "Subject.h"
+#include "Notice.h"
+#include "Observer.h"
+
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <map>
+
+using namespace std;
 
 class EventControl : public Subject
 {
@@ -15,7 +22,7 @@ private:
 public:
 	EventControl();
 	~EventControl();
-	void notify();
+	void notify(Notice notif, string message);
 	bool getBooleanState(string key);
 	void setBooleanState(string key, bool value);
 	string getStringValue(string key);

@@ -16,6 +16,7 @@ public:
 	StageZone(EventControl *subject);
 	~StageZone();
 	void majorStage_Event();
+	void update(Notice notification);
 };
 
 #endif

@@ -24,8 +24,7 @@ public:
 	int getMaxCapacity();
 	void setMaxCapacity(int capacity);
 	void startPresentation();
-	void onUpdateBoolean(string notice, bool notification);
-	void onUpdateString(string notice, string notification);
+	void update(Notice notification);
 };
 
 #endif

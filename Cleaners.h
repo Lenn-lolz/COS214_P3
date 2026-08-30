@@ -16,8 +16,7 @@ public:
 	bool getActive();
 	void setActive(bool active);
 	void cleaningUp(string name);
-	void onUpdateBoolean(string notice, bool notification);
-	void onUpdateString(string notice, string notification);
+	void update(Notice notification);
 };
 
 #endif

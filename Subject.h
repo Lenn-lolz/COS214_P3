@@ -1,9 +1,11 @@
 #ifndef SUBJECT_H
 #define SUBJECT_H
+#include "Observer.h"
 
-#include <string>
-#include <map>
+#include <algorithm>
 #include <vector>
+
+using namespace std;
 
 class Subject
 {

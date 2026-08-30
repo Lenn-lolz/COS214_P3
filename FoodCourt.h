@@ -19,6 +19,7 @@ public:
 	string getRestaurantDisplay();
 	void setRestaurantDisplay(string restaurantDisplay);
 	void Sale();
+	void update(Notice notification);
 };
 
 #endif

@@ -18,7 +18,7 @@ public:
 	GamingBooth(EventControl *subject, string name, int boothNumber);
 	GamingBooth(GamingBooth &booth);
 	~GamingBooth();
-	void update(bool notification);
+	void update(Notice notification);
 	GamingBooth *clone();
 	string getName();
 	void setName(string name);
@@ -27,8 +27,6 @@ public:
 	string getGame();
 	void setGame(string game);
 	void playGame();
-	void onUpdateBoolean(string notice, bool notification);
-	void onUpdateString(string notice, string notification);
 };
 
 #endif

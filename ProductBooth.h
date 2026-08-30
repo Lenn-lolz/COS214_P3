@@ -13,6 +13,7 @@ private:
 	string product;
 	bool open;
 	double productPrice;
+	bool cooking;
 
 public:
 	ProductBooth(EventControl *subject, string name, int boothNumber, string product, double productPrice);
@@ -28,8 +29,7 @@ public:
 	void cookingFood();
 	double getProductPrice();
 	void setProductPrice(double productPrice);
-	void onUpdateBoolean(string notice, bool notification);
-	void onUpdateString(string notice, string notification);
+	void update(Notice notification);
 };
 
 #endif

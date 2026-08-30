@@ -61,22 +61,29 @@ void ProductBooth::setProductPrice(double productPrice)
 	this->productPrice = productPrice;
 }
 
-void ProductBooth::onUpdateBoolean(string notice, bool notification)
+void ProductBooth::update(Notice notification)
 {
-	if (notice == "evacuate")
-	{
-		this->open = notification;
-		this->cooking = notification;
-		std::cout << "Booth " + this->name + "(BoothNumber: " + std::to_string(this->boothNumber) + ") has closed, no more products will be sold until it opens. \n";
+	switch (notification)
+	{ // implementation based on notification?
+	case OPEN:
+		open = true;
+		break;
+	case CLOSE:
+		open = false;
+		break;
+	case EVACUATE:
+		break;
+	case STAGE_EVENT:
+		break;
+	case MAX_CAPACITY:
+		open = false;
+		break;
 	}
 }
 
-void ProductBooth::onUpdateString(string notice, string notification)
+/*if (notice == "sale")
 {
-	if (notice == "sale")
-	{
-		double oldPrice = this->productPrice;
-		this->productPrice = oldPrice * (1.0 - std::stoi(notification) / 100.0);
-		std::cout << "Booth " + this->name + "'s product of " + this->product + "is on sale! From R" + std::to_string(oldPrice) + " to R" + std::to_string(this->productPrice) + "\n";
-	}
-}
+	double oldPrice = this->productPrice;
+	this->productPrice = oldPrice * (1.0 - std::stoi(notification) / 100.0);
+	std::cout << "Booth " + this->name + "'s product of " + this->product + "is on sale! From R" + std::to_string(oldPrice) + " to R" + std::to_string(this->productPrice) + "\n";
+}*/

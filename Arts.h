@@ -19,6 +19,7 @@ public:
 	vector<string> getDecorations();
 	void addDecoration(string decoration);
 	void Sale();
+	void update(Notice notification);
 };
 
 #endif

@@ -1,31 +1,37 @@
 #include "EventControl.h"
 
-EventControl::EventControl() {
-	// TODO - implement EventControl::EventControl
-	throw "Not yet implemented";
+EventControl::EventControl()
+{
+}
+EventControl::~EventControl()
+{
 }
 
-void EventControl::notify() {
-	// TODO - implement EventControl::notify
-	throw "Not yet implemented";
+void EventControl::notify(Notice notif, string message)
+{
+	cout << "NOTIFICATION: -- " << message << "\n";
+	for (auto observer : observerList)
+	{
+		observer->update(notif);
+	}
 }
 
-boolean EventControl::getBooleanState(string key) {
-	// TODO - implement EventControl::getBooleanState
-	throw "Not yet implemented";
+bool EventControl::getBooleanState(string key)
+{
+	return boolMap.at(key);
 }
 
-void EventControl::setBooleanState(string key, boolean value) {
-	// TODO - implement EventControl::setBooleanState
-	throw "Not yet implemented";
+void EventControl::setBooleanState(string key, bool value)
+{
+	boolMap[key] = value;
 }
 
-string EventControl::getStringValue(string key) {
-	// TODO - implement EventControl::getStringValue
-	throw "Not yet implemented";
+string EventControl::getStringValue(string key)
+{
+	return stringMap.at(key);
 }
 
-void EventControl::setStringState(string key, string value) {
-	// TODO - implement EventControl::setStringState
-	throw "Not yet implemented";
+void EventControl::setStringState(string key, string value)
+{
+	stringMap[key] = value;
 }
