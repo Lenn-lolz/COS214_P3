@@ -1,18 +1,17 @@
 #ifndef EVENTGROUP_H
 #define EVENTGROUP_H
 
-class EventGroup : public EventComponent {
+#include "EventComponent.h"
+
+class EventGroup : public EventComponent
+{
 
 public:
-	vector<EventComponent*> children;
-
-	virtual void ~EventGroup() = 0;
-
-	void update(boolean notification);
-
-	void addChild(EventComponent* eComponent);
-
-	void removeChild(EventComponent* eComponent);
+	vector<EventComponent *> children;
+	virtual ~EventGroup() = 0;
+	void update(bool notification);
+	void addChild(EventComponent *eComponent);
+	void removeChild(EventComponent *eComponent);
 };
 
 #endif

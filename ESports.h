@@ -1,32 +1,27 @@
 #ifndef ESPORTS_H
 #define ESPORTS_H
 
-class ESports : public EventUnit {
+#include "EventUnit.h"
+
+class ESports : public EventUnit
+{
 
 private:
 	int capacity;
 	string name;
 	int maxCapacity;
-	EventClass* subject;
-	boolean open;
+	EventControl *subject;
+	bool open;
 
 public:
-	ESports(EventClass* subject, int capacity, string name, int maxCapacity);
-
-	void ~ESports();
-
+	ESports(EventControl *subject, int capacity, string name, int maxCapacity);
+	~ESports();
 	int getCapacity();
-
 	void setCapacity(int capacity);
-
 	string getName();
-
 	void setName(string name);
-
 	int getMaxCapacity();
-
 	void setMaxCapacity(int capacity);
-
 	void startPresentation();
 };
 

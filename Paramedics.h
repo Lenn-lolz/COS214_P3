@@ -1,17 +1,18 @@
 #ifndef PARAMEDICS_H
 #define PARAMEDICS_H
 
-class Paramedics : public EventUnit {
+#include "EventUnit.h"
+
+class Paramedics : public EventUnit
+{
 
 private:
-	EventClass* subject;
-	boolean onDuty;
+	EventControl *subject;
+	bool onDuty;
 
 public:
-	Paramedics(EventClass* subject, boolean onDuty);
-
-	void ~Paramedics();
-
+	Paramedics(EventControl *subject, bool onDuty);
+	~Paramedics();
 	void addressingWound();
 };
 

@@ -1,24 +1,23 @@
 #ifndef FOODCOURT_H
 #define FOODCOURT_H
 
-class FoodCourt : public EventGroup {
+#include "EventGroup.h"
+
+class FoodCourt : public EventGroup
+{
 
 private:
-	EventClass* subject;
-	boolean open;
-	boolean clean;
-	boolean displayRestaurants;
+	EventControl *subject;
+	bool open;
+	bool clean;
+	bool displayRestaurants;
 	string restaurantDisplay;
 
 public:
-	FoodCourt(EventClass* subject, boolean open, boolean clean);
-
-	void ~FoodCourt();
-
+	FoodCourt(EventControl *subject, bool open, bool clean);
+	~FoodCourt();
 	string getRestaurantDisplay();
-
 	void setRestaurantDisplay(string restaurantDisplay);
-
 	void Sale();
 };
 

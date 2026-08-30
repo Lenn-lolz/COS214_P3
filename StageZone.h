@@ -1,19 +1,20 @@
 #ifndef STAGEZONE_H
 #define STAGEZONE_H
 
-class StageZone : public EventGroup {
+#include "EventGroup.h"
+
+class StageZone : public EventGroup
+{
 
 private:
-	EventClass* subject;
-	boolean open;
+	EventControl *subject;
+	bool open;
 	string lightColour;
-	boolean majorStageEvent;
+	bool majorStageEvent;
 
 public:
-	StageZone(EventClass* subject, boolean open, string lightColour);
-
-	void ~StageZone();
-
+	StageZone(EventControl *subject, bool open, string lightColour);
+	~StageZone();
 	void majorStage_Event();
 };
 

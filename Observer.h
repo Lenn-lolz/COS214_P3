@@ -1,13 +1,12 @@
 #ifndef OBSERVER_H
 #define OBSERVER_H
 
-class Observer {
-
+class Observer
+{
 
 public:
-	virtual void ~Observer() = 0;
-
-	virtual void update(boolean notification) = 0;
+	virtual ~Observer() = 0;
+	virtual void update(bool notification) = 0;
 };
 
 #endif

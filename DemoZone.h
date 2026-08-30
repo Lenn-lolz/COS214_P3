@@ -1,32 +1,27 @@
 #ifndef DEMOZONE_H
 #define DEMOZONE_H
 
-class DemoZone : public EventUnit {
+#include "EventUnit.h"
+
+class DemoZone : public EventUnit
+{
 
 private:
 	int capacity;
 	string name;
 	int maxCapacity;
-	EventClass* subject;
-	boolean open;
+	EventControl *subject;
+	bool open;
 
 public:
-	DemoZone(EventClass* subject, int capacity, string name, int maxCapacity);
-
-	void ~DemoZone();
-
+	DemoZone(EventControl *subject, int capacity, string name, int maxCapacity);
+	~DemoZone();
 	int getCapacity();
-
 	void setCapacity(int capacity);
-
 	string getName();
-
 	void setName(string name);
-
 	int getMaxCapacity();
-
 	void setMaxCapacity(int capacity);
-
 	void startPresentation();
 };
 

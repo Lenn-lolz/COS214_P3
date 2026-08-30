@@ -1,39 +1,31 @@
 #ifndef GAMINGBOOTH_H
 #define GAMINGBOOTH_H
 
-class GamingBooth : public EventUnit {
+#include "EventUnit.h"
+
+class GamingBooth : public EventUnit
+{
 
 private:
-	EventClass* subject;
+	EventControl *subject;
 	string name;
 	int boothNumber;
 	string game;
-	boolean open;
-	boolean occupied;
+	bool open;
+	bool occupied;
 
 public:
-	GamingBooth(EventClass* subject, string name, int boothNumber);
-
-	GamingBooth(GamingBooth& booth);
-
-	void ~GamingBooth();
-
-	void update(boolean notification);
-
-	ProductBooth* clone();
-
+	GamingBooth(EventControl *subject, string name, int boothNumber);
+	GamingBooth(GamingBooth &booth);
+	~GamingBooth();
+	void update(bool notification);
+	GamingBooth *clone();
 	string getName();
-
 	void setName(string name);
-
 	int getBoothNumber();
-
 	void setBoothNumber(int boothNumber);
-
 	string getGame();
-
 	void setGame(string game);
-
 	void playGame();
 };
 

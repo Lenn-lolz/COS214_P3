@@ -1,25 +1,24 @@
 #ifndef EVENTCONTROL_H
 #define EVENTCONTROL_H
 
-class EventControl : public Subject {
+using namespace std;
+
+#include "Subject.h"
+
+class EventControl : public Subject
+{
 
 private:
-	map<string, boolean> boolMap;
+	map<string, bool> boolMap;
 	map<string, string> stringMap;
 
 public:
 	EventControl();
-
-	void ~EventControl();
-
+	~EventControl();
 	void notify();
-
-	boolean getBooleanState(string key);
-
-	void setBooleanState(string key, boolean value);
-
+	bool getBooleanState(string key);
+	void setBooleanState(string key, bool value);
 	string getStringValue(string key);
-
 	void setStringState(string key, string value);
 };
 
