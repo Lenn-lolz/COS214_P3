@@ -1,20 +1,18 @@
 #ifndef EVENTGROUP_H
 #define EVENTGROUP_H
 
-#include "EventComponent.h"
-
-#include <vector>
-#include <iostream>
-using namespace std;
-
-
 class EventGroup : public EventComponent {
-private:
-	vector<EventComponent*> children;
-public:
 
-	EventGroup();
-	~EventGroup();
+public:
+	vector<EventComponent*> children;
+
+	virtual void ~EventGroup() = 0;
+
+	void update(boolean notification);
+
+	void addChild(EventComponent* eComponent);
+
+	void removeChild(EventComponent* eComponent);
 };
 
 #endif

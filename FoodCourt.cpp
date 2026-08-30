@@ -1,41 +1,19 @@
 #include "FoodCourt.h"
 
-FoodCourt::FoodCourt() {
+FoodCourt::FoodCourt(EventClass* subject, boolean open, boolean clean) {
 	// TODO - implement FoodCourt::FoodCourt
 	throw "Not yet implemented";
 }
 
-void FoodCourt::update() {
-	// TODO - implement FoodCourt::update
-	throw "Not yet implemented";
+string FoodCourt::getRestaurantDisplay() {
+	return this->restaurantDisplay;
 }
 
-void FoodCourt::open() {
-	// TODO - implement FoodCourt::open
-	throw "Not yet implemented";
+void FoodCourt::setRestaurantDisplay(string restaurantDisplay) {
+	this->restaurantDisplay = restaurantDisplay;
 }
 
-void FoodCourt::close() {
-	// TODO - implement FoodCourt::close
-	throw "Not yet implemented";
-}
-
-void FoodCourt::reportStatus() {
-	// TODO - implement FoodCourt::reportStatus
-	throw "Not yet implemented";
-}
-
-int FoodCourt::getCapacity() {
-	// TODO - implement FoodCourt::getCapacity
-	throw "Not yet implemented";
-}
-
-void FoodCourt::add(EventComponent* event) {
-	// TODO - implement FoodCourt::add
-	throw "Not yet implemented";
-}
-
-void FoodCourt::remove(EventComponent* event) {
-	// TODO - implement FoodCourt::remove
+void FoodCourt::Sale() {
+	// TODO - implement FoodCourt::Sale
 	throw "Not yet implemented";
 }

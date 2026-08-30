@@ -1,28 +1,25 @@
 #ifndef ARTS_H
 #define ARTS_H
 
-#include "EventGroup.h"
-#include "EventComponent.h"
-
-#include <vector>
-#include <iostream>
-
-using namespace std;
-
 class Arts : public EventGroup {
 
-
+private:
+	EventClass* subject;
+	boolean open;
+	boolean clean;
+	string lightColour;
+	vector<string> decorations;
 
 public:
-	Arts();
-	~Arts();
-	void update();
-	void open();
-	void close();
-	void reportStatus();
-	int getCapacity();
-	void add(EventComponent* event);
-	void remove(EventComponent* event);
+	Arts(EventClass* subject);
+
+	void ~Arts();
+
+	vector<string> getDecorations();
+
+	void addDecoration(string decoration);
+
+	void Sale();
 };
 
 #endif

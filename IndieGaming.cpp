@@ -1,41 +1,35 @@
 #include "IndieGaming.h"
 
-IndieGaming::IndieGaming() {
+IndieGaming::IndieGaming(EventClass* subject, int capacity, int maxCapacity) {
 	// TODO - implement IndieGaming::IndieGaming
 	throw "Not yet implemented";
 }
 
-void IndieGaming::update() {
-	// TODO - implement IndieGaming::update
-	throw "Not yet implemented";
-}
-
-void IndieGaming::open() {
-	// TODO - implement IndieGaming::open
-	throw "Not yet implemented";
-}
-
-void IndieGaming::close() {
-	// TODO - implement IndieGaming::close
-	throw "Not yet implemented";
-}
-
-void IndieGaming::reportStatus() {
-	// TODO - implement IndieGaming::reportStatus
-	throw "Not yet implemented";
-}
-
 int IndieGaming::getCapacity() {
-	// TODO - implement IndieGaming::getCapacity
-	throw "Not yet implemented";
+	return this->capacity;
 }
 
-void IndieGaming::add(EventComponent* event) {
-	// TODO - implement IndieGaming::add
-	throw "Not yet implemented";
+void IndieGaming::setCapacity(int capacity) {
+	this->capacity = capacity;
 }
 
-void IndieGaming::remove(EventComponent* event) {
-	// TODO - implement IndieGaming::remove
+int IndieGaming::getMaxCapacity() {
+	return this->maxCapacity;
+}
+
+void IndieGaming::setMaxCapacity(int maxCapacity) {
+	this->maxCapacity = maxCapacity;
+}
+
+vector<string> IndieGaming::getDecorations() {
+	return this->decorations;
+}
+
+void IndieGaming::setDecorations(vector<string> decorations) {
+	this->decorations = decorations;
+}
+
+void IndieGaming::oneGameEvent() {
+	// TODO - implement IndieGaming::oneGameEvent
 	throw "Not yet implemented";
 }

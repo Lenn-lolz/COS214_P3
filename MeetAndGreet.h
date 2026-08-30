@@ -1,25 +1,33 @@
 #ifndef MEETANDGREET_H
 #define MEETANDGREET_H
 
-#include "Stage.h"
-
-
-#include <vector>
-#include <iostream>
-using namespace std;
-
-class MeetAndGreet : public Stage {
+class MeetAndGreet : public EventUnit {
 
 private:
 	int capacity;
 	string name;
 	int maxCapacity;
+	EventClass* subject;
+	boolean open;
+
 public:
-	MeetAndGreet();
-	~MeetAndGreet();
-	void update();
+	MeetAndGreet(EventClass* subject, int capacity, string name, int maxCapacity);
 
+	void ~MeetAndGreet();
 
+	int getCapacity();
+
+	void setCapacity(int capacity);
+
+	string getName();
+
+	void setName(string name);
+
+	int getMaxCapacity();
+
+	void setMaxCapacity(int capacity);
+
+	void startPresentation();
 };
 
 #endif

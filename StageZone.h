@@ -1,26 +1,20 @@
 #ifndef STAGEZONE_H
 #define STAGEZONE_H
 
-#include "EventGroup.h"
-#include "EventComponent.h"
-
-#include <vector>
-#include <iostream>
-
-using namespace std;
-
 class StageZone : public EventGroup {
 
+private:
+	EventClass* subject;
+	boolean open;
+	string lightColour;
+	boolean majorStageEvent;
+
 public:
-	StageZone();
-	~StageZone();
-	void update();
-	void open();
-	void close();
-	void reportStatus();
-	int getCapacity();
-	void add(EventComponent* event);
-	void remove(EventComponent* event);
+	StageZone(EventClass* subject, boolean open, string lightColour);
+
+	void ~StageZone();
+
+	void majorStage_Event();
 };
 
 #endif

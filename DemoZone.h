@@ -1,24 +1,33 @@
 #ifndef DEMOZONE_H
 #define DEMOZONE_H
 
-#include "Stage.h"
-
-#include <vector>
-#include <iostream>
-
-using namespace std;
-
-class DemoZone : public Stage {
+class DemoZone : public EventUnit {
 
 private:
 	int capacity;
 	string name;
 	int maxCapacity;
-public:
-	DemoZone();
-	~DemoZone();
-	void update();
+	EventClass* subject;
+	boolean open;
 
+public:
+	DemoZone(EventClass* subject, int capacity, string name, int maxCapacity);
+
+	void ~DemoZone();
+
+	int getCapacity();
+
+	void setCapacity(int capacity);
+
+	string getName();
+
+	void setName(string name);
+
+	int getMaxCapacity();
+
+	void setMaxCapacity(int capacity);
+
+	void startPresentation();
 };
 
 #endif

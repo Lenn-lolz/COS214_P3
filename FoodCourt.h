@@ -1,26 +1,25 @@
 #ifndef FOODCOURT_H
 #define FOODCOURT_H
 
-#include "EventGroup.h"
-#include "EventComponent.h"
-
-#include <vector>
-#include <iostream>
-
-using namespace std;
-
 class FoodCourt : public EventGroup {
 
+private:
+	EventClass* subject;
+	boolean open;
+	boolean clean;
+	boolean displayRestaurants;
+	string restaurantDisplay;
+
 public:
-	FoodCourt();
-	~FoodCourt();
-	void update();
-	void open();
-	void close();
-	void reportStatus();
-	int getCapacity();
-	void add(EventComponent* event);
-	void remove(EventComponent*  event);
+	FoodCourt(EventClass* subject, boolean open, boolean clean);
+
+	void ~FoodCourt();
+
+	string getRestaurantDisplay();
+
+	void setRestaurantDisplay(string restaurantDisplay);
+
+	void Sale();
 };
 
 #endif
