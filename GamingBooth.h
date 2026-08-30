@@ -27,6 +27,8 @@ public:
 	string getGame();
 	void setGame(string game);
 	void playGame();
+	void onUpdateBoolean(string notice, bool notification);
+	void onUpdateString(string notice, string notification);
 };
 
 #endif

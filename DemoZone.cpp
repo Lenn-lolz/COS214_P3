@@ -1,35 +1,47 @@
 #include "DemoZone.h"
 
-DemoZone::DemoZone(EventClass* subject, int capacity, string name, int maxCapacity) {
-	// TODO - implement DemoZone::DemoZone
-	throw "Not yet implemented";
+DemoZone::DemoZone(EventControl *subject, int capacity, string name, int maxCapacity)
+{
+	this->subject = subject;
+	this->capacity = capacity;
+	this->name = name;
+	this->maxCapacity = maxCapacity;
+	this->open = false;
+	subject->attach(this);
 }
 
-int DemoZone::getCapacity() {
+int DemoZone::getCapacity()
+{
 	return this->capacity;
 }
 
-void DemoZone::setCapacity(int capacity) {
+void DemoZone::setCapacity(int capacity)
+{
 	this->capacity = capacity;
 }
 
-string DemoZone::getName() {
+string DemoZone::getName()
+{
 	return this->name;
 }
 
-void DemoZone::setName(string name) {
+void DemoZone::setName(string name)
+{
 	this->name = name;
 }
 
-int DemoZone::getMaxCapacity() {
+int DemoZone::getMaxCapacity()
+{
 	return this->maxCapacity;
 }
 
-void DemoZone::setMaxCapacity(int capacity) {
+void DemoZone::setMaxCapacity(int capacity)
+{
 	this->maxCapacity = capacity;
 }
 
-void DemoZone::startPresentation() {
-	// TODO - implement DemoZone::startPresentation
-	throw "Not yet implemented";
+void DemoZone::startPresentation()
+{
+	// temp cout statement
+	cout << "- Presentation starting at" << getName() << "\n";
 }

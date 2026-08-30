@@ -1,22 +1,23 @@
 #ifndef CLEANERS_H
 #define CLEANERS_H
 
-class Cleaners : public EventUnit {
+#include "EventUnit.h"
+
+class Cleaners : public EventUnit
+{
 
 private:
-	boolean active;
-	EventClass* subject;
+	bool active;
+	EventControl *subject;
 
 public:
-	Cleaners(EventClass* subject, boolean active);
-
-	void ~Cleaners();
-
+	Cleaners(EventControl *subject, bool active);
+	~Cleaners();
 	bool getActive();
-
 	void setActive(bool active);
-
-	void cleaningUp();
+	void cleaningUp(string name);
+	void onUpdateBoolean(string notice, bool notification);
+	void onUpdateString(string notice, string notification);
 };
 
 #endif

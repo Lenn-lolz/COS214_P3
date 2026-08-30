@@ -12,6 +12,7 @@ private:
 	int maxCapacity;
 	EventControl *subject;
 	bool open;
+	string presentation;
 
 public:
 	MeetAndGreet(EventControl *subject, int capacity, string name, int maxCapacity);
@@ -23,6 +24,8 @@ public:
 	int getMaxCapacity();
 	void setMaxCapacity(int capacity);
 	void startPresentation();
+	void onUpdateBoolean(string notice, bool notification);
+	void onUpdateString(string notice, string notification);
 };
 
 #endif

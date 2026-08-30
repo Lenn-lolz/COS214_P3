@@ -1,6 +1,10 @@
 #include "EventUnit.h"
 
-void EventUnit::update(boolean notification) {
-	// TODO - implement EventUnit::update
-	throw "Not yet implemented";
+void EventUnit::updateBoolean(string notice, bool notification)
+{
+	onUpdateBoolean(notice, notification);
+}
+void EventUnit::updateString(string notice, string notification)
+{
+	onUpdateString(notice, notification);
 }

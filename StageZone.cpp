@@ -1,11 +1,14 @@
 #include "StageZone.h"
 
-StageZone::StageZone(EventClass* subject, boolean open, string lightColour) {
-	// TODO - implement StageZone::StageZone
-	throw "Not yet implemented";
+StageZone::StageZone(EventControl *subject) : EventGroup(subject)
+{
+	this->lightColour = "white";
+	this->majorStageEvent = false;
+	subject->attach(this);
 }
 
-void StageZone::majorStage_Event() {
+void StageZone::majorStage_Event()
+{
 	// TODO - implement StageZone::majorStage Event
 	throw "Not yet implemented";
 }

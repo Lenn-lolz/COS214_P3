@@ -13,7 +13,7 @@ private:
 	bool majorStageEvent;
 
 public:
-	StageZone(EventControl *subject, bool open, string lightColour);
+	StageZone(EventControl *subject);
 	~StageZone();
 	void majorStage_Event();
 };

@@ -1,24 +1,23 @@
 #ifndef ARTS_H
 #define ARTS_H
 
-class Arts : public EventGroup {
+#include "EventGroup.h"
+
+class Arts : public EventGroup
+{
 
 private:
-	EventClass* subject;
-	boolean open;
-	boolean clean;
+	EventControl *subject;
+	bool open;
+	bool clean;
 	string lightColour;
 	vector<string> decorations;
 
 public:
-	Arts(EventClass* subject);
-
-	void ~Arts();
-
+	Arts(EventControl *subject);
+	~Arts();
 	vector<string> getDecorations();
-
 	void addDecoration(string decoration);
-
 	void Sale();
 };
 
