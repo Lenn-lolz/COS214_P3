@@ -1,11 +1,12 @@
 #include "Paramedics.h"
 
-Paramedics::Paramedics() {
+Paramedics::Paramedics(EventControl* subject, bool onDuty) {
 	// TODO - implement Paramedics::Paramedics
 	throw "Not yet implemented";
 }
+Paramedics::~Paramedics(){}
 
-void Paramedics::update() {
-	// TODO - implement Paramedics::update
+void Paramedics::addressingWound() {
+	// TODO - implement Paramedics::addressingWound
 	throw "Not yet implemented";
 }

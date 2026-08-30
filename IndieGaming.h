@@ -2,24 +2,29 @@
 #define INDIEGAMING_H
 
 #include "EventGroup.h"
-#include "EventComponent.h"
 
-#include <vector>
-#include <iostream>
-using namespace std;
+class IndieGaming : public EventGroup
+{
 
-class IndieGaming : public EventGroup {
+private:
+	EventControl *subject;
+	int capacity;
+	int maxCapacity;
+	bool open;
+	bool clean;
+	string lightColour;
+	vector<string> decorations;
 
 public:
-	IndieGaming();
+	IndieGaming(EventControl *subject, int capacity, int maxCapacity);
 	~IndieGaming();
-	void update();
-	void open();
-	void close();
-	void reportStatus();
 	int getCapacity();
-	void add(EventComponent* event);
-	void remove(EventComponent* event);
+	void setCapacity(int capacity);
+	int getMaxCapacity();
+	void setMaxCapacity(int maxCapacity);
+	vector<string> getDecorations();
+	void setDecorations(vector<string> decorations);
+	void oneGameEvent();
 };
 
 #endif

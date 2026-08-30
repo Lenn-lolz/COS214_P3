@@ -1,23 +1,19 @@
 #ifndef CLEANERS_H
 #define CLEANERS_H
+#include "EventUnit.h"
 
+class Cleaners : public EventUnit {
 
-#include "Staff.h"
-
-#include <vector>
-#include <iostream>
-
-using namespace std;
-
-class Cleaners : public Staff {
 private:
 	bool active;
+	EventControl* subject;
+
 public:
-	Cleaners();
+	Cleaners(EventControl* subject, bool active);
 	~Cleaners();
-	void update();
 	bool getActive();
 	void setActive(bool active);
+	void cleaningUp();
 };
 
 #endif

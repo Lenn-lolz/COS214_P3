@@ -3,23 +3,20 @@
 
 #include "Observer.h"
 
+#include <algorithm>
 #include <vector>
-#include <iostream>
 
 using namespace std;
 
 class Subject {
 
-private:
+protected:
 	vector<Observer*> observerList;
 
 public:
-	Subject();
 	virtual ~Subject() = 0;
-	virtual void attach(Observer* observer) = 0;
-	virtual void detach(Observer* observer) = 0;
-	virtual void notify() = 0;
-	
+	void attach(Observer* observer);
+	void detach(Observer* observer);
 };
 
 #endif

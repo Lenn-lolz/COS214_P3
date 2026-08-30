@@ -1,19 +1,19 @@
 #ifndef PARAMEDICS_H
 #define PARAMEDICS_H
 
-#include "Staff.h"
+#include "EventUnit.h"
 
-#include <vector>
-#include <iostream>
-using namespace std;
+class Paramedics : public EventUnit
+{
 
-class Paramedics : public Staff {
-
+private:
+	EventControl *subject;
+	bool onDuty;
 
 public:
-	Paramedics();
+	Paramedics(EventControl *subject, bool onDuty);
 	~Paramedics();
-	void update();
+	void addressingWound();
 };
 
 #endif

@@ -1,25 +1,31 @@
 #ifndef ESPORTS_H
 #define ESPORTS_H
 
-#include "Stage.h"
+#include "EventUnit.h"
 
-#include <vector>
-#include <iostream>
-
-using namespace std;
-
-
-class ESports : public Stage {
+class ESports : public EventUnit
+{
 
 private:
 	int capacity;
 	string name;
-	int maxCapacity;	
-public:
-	ESports();
-	~ESports();
-	void update();
+	int maxCapacity;
+	EventControl *subject;
+	bool open;
 
+public:
+	ESports(EventControl *subject, int capacity, string name, int maxCapacity);
+	~ESports();
+	int getCapacity();
+	void setCapacity(int capacity);
+	string getName();
+	void setName(string name);
+	int getMaxCapacity();
+	void setMaxCapacity(int capacity);
+	void startPresentation();
+
+	//should add own implementation if receives update
+	 void update(Notice notif);
 };
 
 #endif

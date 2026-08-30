@@ -5,16 +5,19 @@
 
 #include <vector>
 #include <iostream>
+#include <algorithm>
+#include <map>
+
 using namespace std;
 
-
 class EventGroup : public EventComponent {
-private:
-	vector<EventComponent*> children;
-public:
 
-	EventGroup();
-	~EventGroup();
+public:
+	vector<EventComponent*> children;
+	virtual ~EventGroup() = 0;
+	void update(Notice notification);
+	void addChild(EventComponent* eComponent);
+	void removeChild(EventComponent* eComponent);
 };
 
 #endif
