@@ -28,6 +28,8 @@ public:
 	void cookingFood();
 	double getProductPrice();
 	void setProductPrice(double productPrice);
+	void onUpdateBoolean(string notice, bool notification);
+	void onUpdateString(string notice, string notification);
 };
 
 #endif
