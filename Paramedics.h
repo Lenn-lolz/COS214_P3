@@ -14,6 +14,7 @@ public:
 	Paramedics(EventControl *subject, bool onDuty);
 	~Paramedics();
 	void addressingWound();
+	void update(Notice notification);
 };
 
 #endif

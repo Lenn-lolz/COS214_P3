@@ -7,6 +7,7 @@ enum Notice {
     MAX_CAPACITY,
     EVACUATE,
     STAGE_EVENT,
+    CLEAN_REQUIRED,
 };
 
 #endif

@@ -11,12 +11,11 @@ private:
 	string name;
 	int maxCapacity;
 	EventControl *subject;
-	bool open;
+	bool openUnit;
 
 public:
 	ESports(EventControl *subject, int capacity, string name, int maxCapacity);
 	~ESports();
-	int getCapacity();
 	void setCapacity(int capacity);
 	string getName();
 	void setName(string name);
@@ -25,7 +24,12 @@ public:
 	void startPresentation();
 
 	//should add own implementation if receives update
-	 void update(Notice notif);
+	void update(Notice notif);
+	void open();
+    void close() ;
+    int getCapacity();
+    void reportStatus() ;
+    void clean();
 };
 
 #endif

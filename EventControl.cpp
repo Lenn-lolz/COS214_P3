@@ -6,6 +6,13 @@ EventControl::EventControl() {
 EventControl::~EventControl() {
 
 }
+void EventControl::setCleaningTarget(EventComponent* target){
+    cleaningTarget = target;
+}
+
+EventComponent* EventControl::getCleaningTarget(){
+    return cleaningTarget;
+}
 
 void EventControl::notify(Notice notif, string message) {
 	cout<< "NOTIFICATION: -- " << message << "\n";
@@ -14,18 +21,4 @@ void EventControl::notify(Notice notif, string message) {
     }
 }
 
-bool EventControl::getBooleanState(string key) {
-	return boolMap.at(key);
-}
 
-void EventControl::setBooleanState(string key, bool value) {
-	boolMap[key] = value;
-}
-
-string EventControl::getStringValue(string key) {
-	return stringMap.at(key);
-}
-
-void EventControl::setStringState(string key, string value) {
-	stringMap[key] = value;
-}

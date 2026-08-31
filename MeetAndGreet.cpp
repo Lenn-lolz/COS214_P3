@@ -1,7 +1,11 @@
 #include "MeetAndGreet.h"
 
 MeetAndGreet::MeetAndGreet(EventControl* subject, int capacity, string name, int maxCapacity) {
-
+	this->subject = subject;
+	this->capacity = capacity;
+	this->name = name;
+	this->maxCapacity = maxCapacity;
+	this->open = false;
 }
 MeetAndGreet::~MeetAndGreet(){
 

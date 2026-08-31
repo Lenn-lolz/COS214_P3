@@ -4,7 +4,7 @@
 #include "Subject.h"
 #include "Notice.h"
 #include "Observer.h"
-
+#include "EventComponent.h"
 
 
 #include <vector>
@@ -12,24 +12,22 @@
 #include <algorithm>
 #include <map>
 
-
+class EventComponent;
 
 using namespace std;
 
 class EventControl : public Subject {
 
 private:
-	map<string, bool> boolMap;
-	map<string, string> stringMap;
+	EventComponent* cleaningTarget;
 
 public:
 	EventControl();
 	~EventControl();
 	void notify(Notice notif, string message);
-	bool getBooleanState(string key);
-	void setBooleanState(string key, bool value);
-	string getStringValue(string key);
-	void setStringState(string key, string value);
+	void setCleaningTarget(EventComponent* target);
+	EventComponent* getCleaningTarget();
+
 };
 
 #endif

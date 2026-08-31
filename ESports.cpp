@@ -5,7 +5,7 @@ ESports::ESports(EventControl* subject, int capacity, string name, int maxCapaci
     this->capacity = capacity;
     this->name = name;
     this->maxCapacity = maxCapacity;
-    this->open = false;
+    this->openUnit = false;
     //subject->attach(this);
 }
 ESports::~ESports(){
@@ -39,16 +39,20 @@ void ESports::startPresentation() {
 	//temp cout statement
 	cout <<"- Presentation starting at" << getName() << "\n";
 }
+void ESports::open(){openUnit = true;}
+void ESports::close(){openUnit = false;}
+void ESports::reportStatus(){}
+void ESports::clean(){}
 
 void ESports::update(Notice notification)
 {
 	switch(notification){ //implementation based on notification?
 		case OPEN:
-		    open = true;
+		    
         	startPresentation();
 			break;
 		case CLOSE:
-			open = false;
+			
 			cout << "- Presentation ending at " << getName() << "\n";
 			cout << "- Closing " << getName() << "\n";
 
@@ -57,8 +61,11 @@ void ESports::update(Notice notification)
 			break;
 		case STAGE_EVENT:
 			break;
+		case CLEAN_REQUIRED:
+			
+			break;
 		case MAX_CAPACITY:
-			open = false;
+			close();
 			break;
 	}
 }

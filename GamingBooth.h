@@ -26,7 +26,6 @@ public:
 	GamingBooth(GamingBooth &booth);
 	~GamingBooth();
 	void update(Notice notification);
-	GamingBooth *clone();
 	string getName();
 	void setName(string name);
 	int getBoothNumber();

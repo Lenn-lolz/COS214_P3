@@ -1,14 +1,10 @@
 #include "EventComponent.h"
 
 EventComponent::~EventComponent(){}
-void EventComponent::open() {
 
+int EventComponent::getCleaness(){
+    return cleanliness;
 }
-
-void EventComponent::close() {
-
-}
-
-void EventComponent::evacuate() {
-
+string EventComponent::getName(){
+    return name;
 }

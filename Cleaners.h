@@ -11,9 +11,11 @@ private:
 public:
 	Cleaners(EventControl* subject, bool active);
 	~Cleaners();
+	void setSubject(EventControl* subject);
 	bool getActive();
 	void setActive(bool active);
-	void cleaningUp();
+    void cleaningUp(string name);
+    void update(Notice notification);
 };
 
 #endif

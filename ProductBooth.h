@@ -2,6 +2,7 @@
 #define PRODUCTBOOTH_H
 
 #include "EventUnit.h"
+using namespace std;
 
 class ProductBooth : public EventUnit
 {
@@ -9,15 +10,13 @@ class ProductBooth : public EventUnit
 private:
 	string name;
 	int boothNumber;
-	EventControl *subject;
 	string product;
-	bool open;
 	bool cooking;
 	double productPrice;
+	EventControl *subject;
 
 public:
 	ProductBooth(EventControl *subject, string name, int boothNumber, string product, double productPrice);
-	ProductBooth(ProductBooth &booth);
 	~ProductBooth();
 	ProductBooth *clone();
 	string getName();
@@ -33,6 +32,12 @@ public:
 	void update(Notice notification);
 	void onUpdateBoolean(string notice, bool notification);
 	void onUpdateString(string notice, string notification);
+
+	void open();
+	void close();
+	int getCapacity();
+	void reportStatus();
+	void clean();
 };
 
 #endif

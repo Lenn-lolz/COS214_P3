@@ -7,7 +7,6 @@ class IndieGaming : public EventGroup
 {
 
 private:
-	EventControl *subject;
 	int capacity;
 	int maxCapacity;
 	bool open;
@@ -25,6 +24,7 @@ public:
 	vector<string> getDecorations();
 	void setDecorations(vector<string> decorations);
 	void oneGameEvent();
+	void update(Notice notification);
 };
 
 #endif
