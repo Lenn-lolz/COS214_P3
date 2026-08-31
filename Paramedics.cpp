@@ -1,22 +1,38 @@
 #include "Paramedics.h"
 
-Paramedics::Paramedics(EventControl *subject, bool onDuty)
+Paramedics::Paramedics(EventControl *subject, bool onDuty, string teamName, int teamSize)
 {
 	this->subject = subject;
 	this->onDuty = false;
-	subject->attach(this);
+	this->teamName = teamName;
+	this->teamSize;
+}
+
+Paramedics::~Paramedics() {}
+
+void Paramedics::openFunction()
+{
+	this->onDuty = true;
+}
+
+void Paramedics::close()
+{
+	this->onDuty = false;
+}
+
+void Paramedics::reportStatus()
+{
+	std::cout << teamName << (onDuty ? " is on Duty.\n" : " is not on Duty.\n");
+}
+
+int Paramedics::getCapacity()
+{
+	return this->teamSize;
 }
 
 void Paramedics::addressingWound()
 {
-	if (this->onDuty)
-	{
-		std::cout << "Paramedics are on Duty and are addressing wounds.\n";
-	}
-	else
-	{
-		std::cout << "Paramedics are not on Duty and cannot at this time address wounds.\n";
-	}
+	std::cout << "Paramedic team " + teamName + (onDuty ? " are on Duty and are addressing wounds.\n" : "are not on Duty and are not addressing wounds.\n");
 }
 
 void Paramedics::update(Notice notification)
@@ -24,12 +40,14 @@ void Paramedics::update(Notice notification)
 	switch (notification)
 	{ // implementation based on notification?
 	case OPEN:
+		openFunction();
 		break;
 	case CLOSE:
+		close();
 		break;
 	case EVACUATE:
-		this->onDuty = true;
-		this->addressingWound();
+		openFunction();
+		addressingWound();
 		break;
 	case STAGE_EVENT:
 		break;

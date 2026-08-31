@@ -14,7 +14,7 @@ private:
 	string restaurantDisplay;
 
 public:
-	FoodCourt(EventControl *subject);
+	FoodCourt(EventControl *subject, string name);
 	~FoodCourt();
 	string getRestaurantDisplay();
 	void setRestaurantDisplay(string restaurantDisplay);

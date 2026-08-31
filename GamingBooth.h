@@ -16,10 +16,14 @@ private:
 
 public:
 	GamingBooth(EventControl *subject, string name, int boothNumber);
-	GamingBooth(GamingBooth &booth);
+	// GamingBooth(GamingBooth &booth);
 	~GamingBooth();
+	void openFunction();
+	void close();
+	void reportStatus();
+	int getCapacity();
 	void update(Notice notification);
-	GamingBooth *clone();
+	// GamingBooth *clone();
 	string getName();
 	void setName(string name);
 	int getBoothNumber();

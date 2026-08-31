@@ -15,7 +15,7 @@ private:
 	vector<string> decorations;
 
 public:
-	IndieGaming(EventControl *subject, int capacity, int maxCapacity);
+	IndieGaming(EventControl *subject, int capacity, int maxCapacity, string name);
 	~IndieGaming();
 	int getCapacity();
 	void setCapacity(int capacity);

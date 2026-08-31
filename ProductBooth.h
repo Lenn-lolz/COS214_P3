@@ -11,15 +11,19 @@ private:
 	int boothNumber;
 	EventControl *subject;
 	string product;
+	int productAmount;
 	bool open;
 	double productPrice;
-	bool cooking;
 
 public:
-	ProductBooth(EventControl *subject, string name, int boothNumber, string product, double productPrice);
-	ProductBooth(ProductBooth &booth);
+	ProductBooth(EventControl *subject, string name, int boothNumber, string product, double productPrice, int productAmount);
+	// ProductBooth(ProductBooth &booth);
 	~ProductBooth();
-	ProductBooth *clone();
+	// ProductBooth *clone();
+	void openFunction();
+	void close();
+	void reportStatus();
+	int getCapacity();
 	string getName();
 	void setName(string name);
 	int getBoothNumber();

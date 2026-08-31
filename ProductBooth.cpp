@@ -1,6 +1,6 @@
 #include "ProductBooth.h"
 #include <iostream>
-ProductBooth::ProductBooth(EventControl *subject, string name, int boothNumber, string product, double productPrice)
+ProductBooth::ProductBooth(EventControl *subject, string name, int boothNumber, string product, double productPrice, int productAmount)
 {
 	this->subject = subject;
 	this->name = name;
@@ -8,18 +8,41 @@ ProductBooth::ProductBooth(EventControl *subject, string name, int boothNumber, 
 	this->product = product;
 	this->productPrice = productPrice;
 	this->open = false;
+	this->productAmount = productAmount;
 }
 
-ProductBooth::ProductBooth(ProductBooth &booth) : subject(booth.subject), name(booth.name), boothNumber(booth.boothNumber), product(booth.product), productPrice(booth.productPrice)
+ProductBooth::~ProductBooth() {}
+
+void ProductBooth::openFunction()
 {
+	this->open = true;
 }
 
-ProductBooth *ProductBooth::clone()
+void ProductBooth::close()
+{
+	this->open = false;
+}
+
+void ProductBooth::reportStatus()
+{
+	std::cout << name << (open ? " is open.\n" : " is closed.\n");
+}
+
+int ProductBooth::getCapacity()
+{
+	return productAmount;
+}
+
+/*ProductBooth::ProductBooth(ProductBooth &booth) : subject(booth.subject), name(booth.name), boothNumber(booth.boothNumber), product(booth.product), productPrice(booth.productPrice)
+{
+}*/
+
+/*ProductBooth *ProductBooth::clone()
 {
 	ProductBooth *newBooth = new ProductBooth(*this);
 	this->subject->attach(newBooth);
 	return newBooth;
-}
+}*/
 
 string ProductBooth::getName()
 {
@@ -66,17 +89,17 @@ void ProductBooth::update(Notice notification)
 	switch (notification)
 	{ // implementation based on notification?
 	case OPEN:
-		open = true;
+		openFunction();
 		break;
 	case CLOSE:
-		open = false;
+		close();
 		break;
 	case EVACUATE:
+		close();
 		break;
 	case STAGE_EVENT:
 		break;
 	case MAX_CAPACITY:
-		open = false;
 		break;
 	}
 }

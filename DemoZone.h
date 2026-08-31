@@ -16,6 +16,9 @@ private:
 public:
 	DemoZone(EventControl *subject, int capacity, string name, int maxCapacity);
 	~DemoZone();
+	void openFunction();
+	void close();
+	void reportStatus();
 	int getCapacity();
 	void setCapacity(int capacity);
 	string getName();

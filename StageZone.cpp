@@ -1,11 +1,12 @@
 #include "StageZone.h"
 
-StageZone::StageZone(EventControl *subject) : EventGroup(subject)
+StageZone::StageZone(EventControl *subject, string name) : EventGroup(subject, name)
 {
 	this->lightColour = "white";
 	this->majorStageEvent = false;
-	subject->attach(this);
 }
+
+StageZone::~StageZone() {}
 
 void StageZone::majorStage_Event()
 {
@@ -22,10 +23,14 @@ void StageZone::update(Notice notification)
 		break;
 	case CLOSE:
 		open = false;
+		majorStageEvent = false;
 		break;
 	case EVACUATE:
+		open = false;
+		majorStageEvent = false;
 		break;
 	case STAGE_EVENT:
+		majorStageEvent = true;
 		break;
 	case MAX_CAPACITY:
 		open = false;

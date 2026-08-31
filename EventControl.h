@@ -10,6 +10,8 @@
 #include <algorithm>
 #include <map>
 
+class EventGroup;
+
 using namespace std;
 
 class EventControl : public Subject

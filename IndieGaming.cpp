@@ -1,14 +1,15 @@
 #include "IndieGaming.h"
 
-IndieGaming::IndieGaming(EventControl *subject, int capacity, int maxCapacity) : EventGroup(subject)
+IndieGaming::IndieGaming(EventControl *subject, int capacity, int maxCapacity, string name) : EventGroup(subject, name)
 {
 	this->capacity = capacity;
 	this->maxCapacity = maxCapacity;
 	this->open = false;
 	this->clean = true;
 	this->lightColour = "white";
-	subject->attach(this);
 }
+
+IndieGaming::~IndieGaming() {}
 
 int IndieGaming::getCapacity()
 {
@@ -57,6 +58,8 @@ void IndieGaming::update(Notice notification)
 		open = false;
 		break;
 	case EVACUATE:
+		open = false;
+		setCapacity(0);
 		break;
 	case STAGE_EVENT:
 		break;

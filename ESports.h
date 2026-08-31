@@ -16,6 +16,9 @@ private:
 public:
 	ESports(EventControl *subject, int capacity, string name, int maxCapacity);
 	~ESports();
+	void openFunction();
+	void close();
+	void reportStatus();
 	int getCapacity();
 	void setCapacity(int capacity);
 	string getName();

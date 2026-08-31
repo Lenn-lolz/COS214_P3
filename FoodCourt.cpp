@@ -1,12 +1,13 @@
 #include "FoodCourt.h"
 
-FoodCourt::FoodCourt(EventControl *subject) : EventGroup(subject)
+FoodCourt::FoodCourt(EventControl *subject, string name) : EventGroup(subject, name)
 {
 	this->clean = true;
 	this->restaurantDisplay = " ";
 	this->displayRestaurants = false;
-	subject->attach(this);
 }
+
+FoodCourt::~FoodCourt() {}
 
 void FoodCourt::update(Notice notification)
 {
@@ -19,11 +20,11 @@ void FoodCourt::update(Notice notification)
 		open = false;
 		break;
 	case EVACUATE:
+		open = false;
 		break;
 	case STAGE_EVENT:
 		break;
 	case MAX_CAPACITY:
-		open = false;
 		break;
 	}
 	EventGroup::update(notification);

@@ -1,11 +1,12 @@
 #include "Arts.h"
 
-Arts::Arts(EventControl *subject) : EventGroup(subject)
+Arts::Arts(EventControl *subject, string name) : EventGroup(subject, name)
 {
 	this->clean = true;
 	this->lightColour = "white";
-	subject->attach(this);
 }
+
+Arts::~Arts() {}
 
 vector<string> Arts::getDecorations()
 {
@@ -33,11 +34,11 @@ void Arts::update(Notice notification)
 		open = false;
 		break;
 	case EVACUATE:
+		open = false;
 		break;
 	case STAGE_EVENT:
 		break;
 	case MAX_CAPACITY:
-		open = false;
 		break;
 	}
 	EventGroup::update(notification);

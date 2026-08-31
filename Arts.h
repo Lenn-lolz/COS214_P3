@@ -14,7 +14,7 @@ private:
 	vector<string> decorations;
 
 public:
-	Arts(EventControl *subject);
+	Arts(EventControl *subject, string name);
 	~Arts();
 	vector<string> getDecorations();
 	void addDecoration(string decoration);

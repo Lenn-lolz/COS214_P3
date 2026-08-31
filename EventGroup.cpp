@@ -1,9 +1,33 @@
 #include "EventGroup.h"
 
-EventGroup::EventGroup(EventControl *subject)
+EventGroup::EventGroup(EventControl *subject, string name)
 {
 	this->subject = subject;
+	this->name = name;
 	subject->attach(this);
+}
+
+void EventGroup::openFunction()
+{
+	for (EventComponent *child : children)
+		child->openFunction();
+}
+void EventGroup::close()
+{
+	for (EventComponent *child : children)
+		child->close();
+}
+void EventGroup::reportStatus()
+{
+	std::cout << name << ":\n";
+	for (EventComponent *child : children)
+		child->reportStatus();
+}
+int EventGroup::getCapacity()
+{
+	for (EventComponent *child : children)
+		child->getCapacity();
+	return 1;
 }
 
 void EventGroup::update(Notice notification)
@@ -25,23 +49,14 @@ void EventGroup::addChild(EventComponent *eComponent)
 
 void EventGroup::removeChild(EventComponent *eComponent)
 {
-	std::erase(this->children, eComponent);
+	children.erase(std::remove(children.begin(), children.end(), eComponent), children.end());
 }
 
-/*void EventGroup::openGroup(string name)
+EventGroup::~EventGroup()
 {
-	this->open = true;
-	std::cout << name + " has been opened.\n";
+	for (EventComponent *child : children)
+	{
+		delete child;
+	}
+	children.clear();
 }
-
-void EventGroup::closeGroup(string name)
-{
-	this->open = false;
-	std::cout << name + " has been opened.\n";
-}
-
-void EventGroup::evacuateGroup(string name)
-{
-	this->open = false;
-	std::cout << name + " has been opened.\n";
-}*/

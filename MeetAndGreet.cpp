@@ -8,7 +8,24 @@ MeetAndGreet::MeetAndGreet(EventControl *subject, int capacity, string name, int
 	this->maxCapacity = maxCapacity;
 	this->open = false;
 	this->presentation = "";
-	subject->attach(this);
+}
+
+MeetAndGreet::~MeetAndGreet() {}
+
+void MeetAndGreet::openFunction()
+{
+	this->open = true;
+	startPresentation();
+}
+
+void MeetAndGreet::close()
+{
+	this->open = false;
+}
+
+void MeetAndGreet::reportStatus()
+{
+	std::cout << name << (open ? " is open.\n" : " is closed.\n");
 }
 
 int MeetAndGreet::getCapacity()
@@ -43,7 +60,8 @@ void MeetAndGreet::setMaxCapacity(int capacity)
 
 void MeetAndGreet::startPresentation()
 {
-	std::cout << "Meet and Greet Stage " + this->name + " is starting the presentation of " + this->presentation;
+	// temp cout statement
+	cout << "- Presentation starting at" << getName() << "\n";
 }
 
 void MeetAndGreet::update(Notice notification)
@@ -51,17 +69,19 @@ void MeetAndGreet::update(Notice notification)
 	switch (notification)
 	{ // implementation based on notification?
 	case OPEN:
-		open = true;
+		openFunction();
 		break;
 	case CLOSE:
-		open = false;
+		close();
 		break;
 	case EVACUATE:
+		close();
+		setCapacity(0);
 		break;
 	case STAGE_EVENT:
 		break;
 	case MAX_CAPACITY:
-		open = false;
+		close();
 		break;
 	}
 }
