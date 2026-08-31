@@ -1,3 +1,9 @@
+/**
+ * @brief Abstract composite that inherits from component
+ * 
+ * Interface for concrete composites and contains children that are concrete leaves or concrete composites
+ */
+
 #ifndef EVENTGROUP_H
 #define EVENTGROUP_H
 

@@ -1,3 +1,9 @@
+/**
+ * @brief Concrete subject 
+ * 
+ * Implements the subject being observed.Stores objects that are observing it
+ */
+
 #ifndef EVENTCONTROL_H
 #define EVENTCONTROL_H
 

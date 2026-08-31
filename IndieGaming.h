@@ -1,3 +1,9 @@
+/**
+ * @brief Concrete composite and concrete observer that can have leaves or composites
+ * 
+ * Maintains ref to subject being observed.
+ */
+
 #ifndef INDIEGAMING_H
 #define INDIEGAMING_H
 

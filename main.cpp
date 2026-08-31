@@ -8,6 +8,8 @@
 #include "StageZone.h"
 #include "IndieGaming.h"
 
+using namespace std;
+
 int main(){
     EventControl eventControl;
 
@@ -57,7 +59,7 @@ int main(){
 
     //remove group from observerList
     cout << "- ----------Removing Large Food Court -------------\n";
-    eventControl.detach(&foodCourtLarge);
+    //eventControl.detach(&foodCourtLarge);
 
     eventControl.notify(OPEN,"The event is open.");
     eventControl.notify(EVACUATE,"The event is evacuating.");

@@ -1,3 +1,9 @@
+/**
+ * @brief Concrete leaf and concrete observer that can have leaves or composites
+ * 
+ * Maintains ref to subject being observed.
+ */
+
 #ifndef CLEANERS_H
 #define CLEANERS_H
 #include "EventUnit.h"

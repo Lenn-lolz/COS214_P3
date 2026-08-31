@@ -39,8 +39,8 @@ GamingBooth.o: GamingBooth.cpp GamingBooth.h
 FoodCourt.o: FoodCourt.cpp FoodCourt.h
 	g++ -g -c FoodCourt.cpp -std=c++11
 
-main.o: main.cpp
-	g++ -g -c main.cpp -std=c++11
+Main.o: Main.cpp
+	g++ -g -c Main.cpp -std=c++11
 
 eventflow: EventControl.o EventComponent.o EventUnit.o Paramedics.o ProductBooth.o MeetAndGreet.o IndieGaming.o EventGroup.o ESports.o Subject.o StageZone.o GamingBooth.o FoodCourt.o main.o
 	g++ -g EventControl.o EventComponent.o EventUnit.o Paramedics.o ProductBooth.o MeetAndGreet.o IndieGaming.o EventGroup.o ESports.o Subject.o StageZone.o GamingBooth.o FoodCourt.o main.o -o eventflow
@@ -49,7 +49,7 @@ run: eventflow
 	./eventflow
 
 valgrind: eventflow
-	valgrind --leak-check=full --show-leak-kinds=all ./eventflow
+	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./eventflow
 
 clean:
 	rm -f *.o eventflow

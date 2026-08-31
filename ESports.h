@@ -1,3 +1,9 @@
+/**
+ * @brief Concrete leaf and concrete observer that can have leaves or composites
+ * 
+ * Maintains ref to subject being observed.
+ */
+
 #ifndef ESPORTS_H
 #define ESPORTS_H
 

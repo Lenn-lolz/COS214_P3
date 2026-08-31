@@ -1,3 +1,9 @@
+/**
+ * @brief Art Concrete composite and concrete observer that can have leaves or composites
+ * 
+ * Maintains ref to subject being observed.
+ */
+
 #ifndef ARTS_H
 #define ARTS_H
 

@@ -1,3 +1,9 @@
+/**
+ * @brief Concrete leaf and concrete observer that implements ProductBooth functionality
+ * 
+ * Maintains ref to subject being observed.
+ */
+
 #ifndef PRODUCTBOOTH_H
 #define PRODUCTBOOTH_H
 

@@ -1,3 +1,8 @@
+/**
+ * @brief Abstract leaf that inherits from component
+ * 
+ * Interface for concrete leaves
+ */
 #ifndef EVENTUNIT_H
 #define EVENTUNIT_H
 

@@ -1,3 +1,9 @@
+/**
+ * @brief Concrete leaf and concrete observer that implements Paramedic functionality
+ * 
+ * Maintains ref to subject being observed.
+ */
+
 #ifndef PARAMEDICS_H
 #define PARAMEDICS_H
 

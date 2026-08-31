@@ -1,4 +1,3 @@
-
 #include <iostream>
 
 #include "EventControl.h"
@@ -7,6 +6,8 @@
 #include "FoodCourt.h"
 #include "StageZone.h"
 #include "IndieGaming.h"
+
+using namespace std;
 
 int main(){
     EventControl eventControl;
@@ -30,7 +31,7 @@ int main(){
 
     foodCourtSmall.addChild(&BoothSausages);
     foodCourtSmall.addChild(&BoothBurgers);
-    foodCourtSmall.addChild(&BigStage);
+  
 
     cout<< "New Area 2 - \n\n";
 
@@ -62,6 +63,6 @@ int main(){
     eventControl.notify(OPEN,"The event is open.");
     eventControl.notify(EVACUATE,"The event is evacuating.");
 
-    eventControl.detach(&foodCourtLarge);
+    //eventControl.detach(&foodCourtLarge);
     return 0;
 } 

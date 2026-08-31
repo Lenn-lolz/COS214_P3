@@ -1,3 +1,9 @@
+/**
+ * @brief Subject interface to attach detach.
+ * 
+ * allows for attaching and detaching to concrete subject
+ */
+
 #ifndef SUBJECT_H
 #define SUBJECT_H
 

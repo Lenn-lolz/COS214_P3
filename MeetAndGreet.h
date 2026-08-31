@@ -1,3 +1,9 @@
+/**
+ * @brief Concrete leaf and concrete observer that implements Meet and greet
+ * 
+ * Maintains ref to subject being observed.
+ */
+
 #ifndef MEETANDGREET_H
 #define MEETANDGREET_H
 

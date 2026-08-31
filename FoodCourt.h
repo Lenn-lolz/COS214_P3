@@ -1,3 +1,9 @@
+/**
+ * @brief Abstract composite that inherits from component
+ * 
+ * Interface for concrete composites and contains children that are concrete leaves or concrete composites
+ */
+
 #ifndef FOODCOURT_H
 #define FOODCOURT_H
 

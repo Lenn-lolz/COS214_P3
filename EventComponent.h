@@ -1,9 +1,8 @@
 /**
- * @brief Abstract component in the EventFlow Composite hierarchy.
+ * @brief Abstract event component in EventFlow.
  *
- * common interface for EventGroup
- * composites and EventUnit leaf objects.
- */
+ * common interface for EventGroup composites and EventUnit leaf objects.
+ */ 
 
 #ifndef EVENTCOMPONENT_H
 #define EVENTCOMPONENT_H
