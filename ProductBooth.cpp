@@ -13,7 +13,7 @@ ProductBooth::ProductBooth(EventControl *subject, string name, int boothNumber, 
 
 
 ProductBooth::~ProductBooth(){
-	subject->detach(this);
+	
 }
 void ProductBooth::clean(){
 	cleanliness = 100;

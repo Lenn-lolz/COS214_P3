@@ -1,3 +1,10 @@
+/**
+ * @brief Abstract component in the EventFlow Composite hierarchy.
+ *
+ * common interface for EventGroup
+ * composites and EventUnit leaf objects.
+ */
+
 #ifndef EVENTCOMPONENT_H
 #define EVENTCOMPONENT_H
 
@@ -17,7 +24,9 @@ protected:
 	string status;
 
 public:
-	
+	/**
+     * @brief Virtual destructor.
+     */
 	virtual ~EventComponent() = 0;
 	virtual void update(Notice notification) = 0;
 	virtual void open() = 0;

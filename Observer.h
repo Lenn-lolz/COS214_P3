@@ -1,3 +1,10 @@
+
+/**
+ * @brief Interface for objects that receive EventFlow notifications
+ *
+ * Observer,the Observer-pattern interface. Concrete observers
+ * implement update() to react to notifications from EventControl
+ */
 #ifndef OBSERVER_H
 #define OBSERVER_H
 

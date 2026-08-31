@@ -3,7 +3,9 @@ EventGroup::EventGroup(EventControl *subject){
 	this->subject = subject;
 	//subject->attach(this);
 }
-EventGroup::~EventGroup(){}
+EventGroup::~EventGroup(){
+    subject->detach(this);
+}
 void EventGroup::update(Notice notification) {
     
     //comp stuff
